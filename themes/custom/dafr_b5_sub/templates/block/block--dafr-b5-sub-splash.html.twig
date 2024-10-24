@@ -1,0 +1,37 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  
+  <div id="splash" class="">
+    <header>
+      <div class="ue">
+        <img class="ue-image" src="/sites/default/files/theme/Flag_of_Europe.svg" alt="logo UE" width="810" height="540">
+      </div>
+      <div class="acc">        
+        {% include 'modules/contrib/civic_accessibility_toolbar/templates/block--accessibility_toolbar.html.twig' %}
+      </div>
+    </header>
+
+    <main>
+          <img class="ue-image" src="/sites/default/files/Fundacja%20API_akcept_01.svg" alt="logo UE" width="810" height="540">
+    </main>
+    
+    <footer>
+      <div id="closePopup" class='container-button'>
+        <span class='pulse-button close' >dalej</span>
+      </div>
+    </footer>
+  </div>
+
+  
+</div>
