@@ -1,0 +1,42 @@
+{#
+/**
+ * @file prehome.html.twig
+ * Default theme implementation to present prehome modal.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *          content.field_name to access public fields
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_prehome()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('prehome-content') }}>
+  {% if content %}
+
+    <div id="splash">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <img class="ue-image" src="/sites/default/files/theme/Flag_of_Europe.svg" alt="logo UE" width="810" height="540">
+            </div>
+            <div class="col-12 col-md-6 ">                
+                {# Wstawienie szablonu Civic Accessibility Toolbar do aktualnego szablonu #}
+                {% include 'modules/contrib/civic_accessibility_toolbar/templates/block--accessibility_toolbar.html.twig' %}
+            </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-center content">
+            {{- content -}}
+        </div>
+        <div class="d-flex justify-content-center">
+
+            <div class='container-button'>
+              <span class='pulse-button close'>dalej</span>
+            </div>
+
+        </div>
+    </div>
+   
+  {% endif %}
+</div>

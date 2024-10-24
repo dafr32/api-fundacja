@@ -1,0 +1,52 @@
+[data-component-id="dafr_b5_sub:article_1"] {
+  /* @todo Add your styles here. */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* font-family: "Nunito", sans-serif; */
+
+.article {
+  padding: 50px 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky-title {
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 200px;    
+  width: 100%;
+  height: 500px;
+  background-color: var(--cleenhearts-white2, #EFECE7);
+  z-index: -1;
+  border-radius: 0px 1000px 1000px 0px;
+  border: 4px solid rgb(197, 151, 0);
+  border-left: 0;
+}
+
+/* Styl dla prawej kolumny, w której zawartość przewija się */
+.scrollable-content {
+  max-height: 500px; /* Wysokość sekcji, w której chcesz, aby była przewijana zawartość */
+  overflow-y: auto;  /* Włącza przewijanie pionowe */
+  padding-left: 20px; /* Opcjonalnie - odstęp między kolumnami */
+}
+
+.article-content {
+  min-height: 500px;
+}
+
+.date {
+  margin-bottom: 20px;
+}
+
+.article_1 h2.title {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.article_1 .content {
+  margin-top: 40px;
+}

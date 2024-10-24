@@ -1,0 +1,12 @@
+name: 'block - Banner'
+type: module
+description: 'Creates DAFR custom block type - Banner - for component banner.'
+core_version_requirement: ^10
+package: Dafr
+dependencies:
+  - drupal:block_content
+  - drupal:field
+  - drupal:text
+  - drupal:image
+  - drupal:link
+version: 1.0

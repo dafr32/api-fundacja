@@ -1,0 +1,20 @@
+<div {{ attributes }}>  
+  <article class="article article_full">
+    <div class="row relavive">
+      <div class="col-12 col-lg-5 sticky-top">
+        <div class="sticky-title">
+          <div class="title__bg">
+            {% block title %}{% endblock %}
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-7 header">
+        <div class="article-content">
+          
+            {% block content %}{% endblock %}
+          
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

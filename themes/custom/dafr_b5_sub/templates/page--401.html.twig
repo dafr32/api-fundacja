@@ -1,0 +1,117 @@
+
+            <nav class="navbar navbar-default header_aera affix-top">
+               <div class="container m-s">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="col-md-4 p0">
+                     <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#min_navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        {{page.header}}
+                     </div>
+                  </div>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="col-md-8 p0">
+                     {{ page.primary_menu}}
+                     <!-- /.navbar-collapse -->
+                  </div>
+               </div>
+               <!-- /.container -->
+            </nav>
+
+     <!-- Top banner Section -->
+<section id="top-banner" style="background-image:url({{bg_image_url}}) !important; background-repeat: no-repeat;background-size: cover; height:500px;">
+  <div class="container">
+    <div class="row">
+      <div class="banner-caption">
+      <h1>PAGE NOT FOUND</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Top banner Section -->
+
+ <section {{ content_attributes.addClass(content_classes) }}>
+
+        {# Content #}
+        {% block content %}
+          <a id="main-content"></a>
+          {{ page.content }}
+        {% endblock %}
+</section>
+
+
+ <div class="our_partners_area bg_gradient_team">
+         <div class="book_now_aera ">
+            <div class="container">
+               <div class="row book_now">
+                  <div class="col-md-7 booking_text">
+                     <h4>{{consultation}}
+                     </h4>
+                     <p>{{consultation_desc}}</p>
+                  </div>
+                  <div class="col-md-5 p0 book_bottun">
+                     <div class="col-md-5">
+                     </div>
+                     <div class="col-md-7">
+                        <div class="top-banner wow fadeInRight text-left" style="visibility: visible; animation-name: fadeInRight;">
+                           <a id="#services" href="{{btn_link}}" class="btn btn-primary radius-50  wow fadeInUp  js-scroll-trigger" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">{{btn_text}}</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+     
+
+    <div class="our_footer_area">
+         <div class="book_now_aera ">
+            <div class="container wow fadeInUp">
+               <div class="row book_now">
+                  <div class="col-md-4">
+                     <div class="">
+                        <a class=" logo-biss" href="index.html">{{footer_title}}</a>
+                     </div>
+                     <p class="footer-h">{{footer_desc}}</p>
+                     <div class="bigpixi-footer-social">
+                        {% if facebook %}
+                        <a href="{{facebook}}" target="_blank"><i id="social-fb" class="fa fa-facebook fa-2x social"></i></a>
+                        {% endif %}
+                        {% if twitter %}
+                        <a href="{{twitter}}" target="_blank"><i id="social-tw" class="fa fa-twitter fa-2x social"></i></a>
+                        {% endif %}
+                        {% if instagram %}
+                        <a href="{{instagram}}" target="_blank"><i id="social-em" class="fa fa-instagram fa-2x social"></i></a>
+                        {% endif %}
+                     </div>
+                  </div>
+                  <div class="col-md-1 ">
+                  </div>
+                  <div class="col-md-3 footer-menu">
+                     {{ page.footer_col_2 }}
+                  </div>
+                  <div class="col-md-4">
+                     <ul class="location">
+                        <h2 class="footer-top">{{contact_title}}</h2>
+                        <li class="footer-left-h">{{contact_info}}</li>
+                        <li class="footer-left-h"><span class="c_yellow">{{email_title}}</span>
+                           <a href="mailto:{{email}}"> {{email}} </a>
+                        </li>
+                        <li class="footer-left-h"><span class="c_yellow">{{phone_title}} </span><a href="tel:{{phone}}">{{phone}}</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-md-12 copyright">                     
+                      {% if copyright %}
+                        {{copyright|striptags('<b>,<strong>,<p>,<a>,<pre>')|raw}}
+                      {% endif %}  
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>           

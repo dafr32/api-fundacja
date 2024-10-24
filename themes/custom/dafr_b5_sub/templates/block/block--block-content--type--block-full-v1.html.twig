@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% embed 'dafr_b5_sub:block_full_v1' with { attributes:attributes.addClass(classes) } %}
+    {% block image %}
+      {{ content.field_image }}
+    {% endblock %}
+      {% block content %}
+      {{ content | without ('field_image') }}
+    {% endblock %}
+  {% endembed %}
+</div>

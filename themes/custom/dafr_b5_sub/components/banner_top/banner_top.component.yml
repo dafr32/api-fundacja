@@ -1,0 +1,27 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: banner top
+status: stable
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+    height:
+      title: height
+      type: string
+      description: The height of the banner
+slots:
+  # The key is the name of the slot. In your template you will use
+  # {% block content %}.
+  content:
+    # A human-readable name.
+    title: Content
+    # A description.
+    description: This is the banner content
+  image:
+    # A human-readable name.
+    title: Image
+    # A description.
+    description: This is the banner image
+  
