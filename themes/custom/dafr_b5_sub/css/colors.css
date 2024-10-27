@@ -101,6 +101,10 @@ a:active,
   color: #fffeff;
 }
 
+.dropdown-item:hover {  
+  background-color: #ffffff63;
+}
+
 
 /* ---------- Color Form ----------- */
 

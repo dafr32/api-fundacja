@@ -20,12 +20,25 @@
   };
 
 
+    // MENU open submenu on hover 
+    $(document).ready(function () {    
+      $('.nav-item.dropdown').hover(      
+        function () {        
+          $('.active .dropdown-menu').addClass('show');
+        },      
+        function () {        
+          $('.active .dropdown-menu').removeClass('show');
+        }
+      );
+    });
+
+
   Drupal.behaviors.prehomeBehavior = {
     attach: function (context, settings) {
       setTimeout(function () {
         const pageWrapper = $('#page-wrapper', context);
         pageWrapper.css('display', 'block');
-      }, 200);
+      }, 500);
     }
   };
 
